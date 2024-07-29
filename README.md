@@ -1,7 +1,7 @@
 # LLM_JapaneseTest
 This is Japanese Test
 
-'''
+```
 from transformers import AutoModelForCausalLM, AutoTokenizer, TextStreamer
 
 model = AutoModelForCausalLM.from_pretrained("cyberagent/Llama-3.1-70B-Japanese-Instruct-2407", device_map="auto", torch_dtype="auto")
@@ -16,4 +16,4 @@ input_ids = tokenizer.apply_chat_template(messages, add_generation_prompt=True, 
 output_ids = model.generate(input_ids,
                             max_new_tokens=1024,
                             streamer=streamer)
-'''
+```
